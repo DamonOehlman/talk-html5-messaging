@@ -1,0 +1,204 @@
+<!doctype html>  
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>HTML5 Messaging</title>
+
+<meta name="description" content="An easy to use CSS 3D slideshow tool for quickly creating good looking HTML presentations.">
+<meta name="author" content="Hakim El Hattab">
+
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/pres.style.css" /><link rel="stylesheet" type="text/css" href="css/highlight.zenburn.css" /><link rel="stylesheet" type="text/css" href="css/reset.css" /><link rel="stylesheet" type="text/css" href="css/main.css" /><script src="js/jquery.min.js"></script>
+</head>
+<body>
+<div id="reveal">
+	<!-- Used to fade in a background when a specific slide state is reached -->
+	<div class="state-background"></div>
+	
+	<!-- Any section element inside of this container is displayed as a slide -->
+	<div class="slides">
+	    
+        <section data-bg="images/5333260849_d8c52df551_b.jpg"data-attribution="http://www.flickr.com/photos/pasukaru76/5333260849/in/set-72157624732951397/">
+        	<h1>HTML5 Messaging</h1>
+
+
+
+        </section>
+        
+        <section >
+        	<h2>Why Care About Messaging?</h2><ul><li class="fragment">Because we can do better than the currently one sided conversation</li><li class="fragment">Websockets and other messaging techniques will replace current make-shift solutions.</li></ul>
+
+
+        </section>
+        
+        <section data-bg="images/5158715290_f0605b197a_b.jpg"data-attribution="http://www.flickr.com/photos/pedrovezini/5158715290/">
+        	<h1>Web Sockets</h1>
+
+
+
+        </section>
+        
+        <section >
+        	<h2>Why Websockets?</h2><ul><li class="fragment">Because you can't beat realtime.</li><li class="fragment">Bi-directional communication.</li><li class="fragment">Lightweight!</li></ul>
+
+
+        </section>
+        
+        <section >
+        	<h2>Creating a Socket</h2>
+<p>Creating a new websocket connection (and attempting to open that connection) is <strong>really, really</strong> easy:
+
+</p>
+<pre><code class="javascript">var socket = new WebSocket('ws://echo.websocket.org/');</pre></code>
+
+</p>
+
+
+
+        </section>
+        
+        <section >
+        	<h2>Open Sesame</h2>
+<p>And, your newly created websocket object will fire an <strong>open</strong> message when the connection is active:
+
+</p>
+<pre><code class="javascript">socket.onopen = function() {
+    // ready for comms
+};
+</pre></code>
+
+</p>
+
+
+
+        </section>
+        
+        <section data-bg="images/5975138384_56b527ac05_b.jpg"data-attribution="http://www.flickr.com/photos/pasukaru76/5975138384/">
+        	<h1>DEMO: Simple Echo</h1>
+
+
+
+        </section>
+        
+        <section >
+        	
+
+
+        </section>
+        
+        <section >
+        	<h2>Websockets Live</h2>
+<p>Using websockets in a production environment is possible, but there are challenges.
+
+</p>
+<ul>
+<li>Reverse proxy support</li>
+</ul>
+
+
+
+        </section>
+        
+        <section >
+        	
+
+
+        </section>
+        
+        <section >
+        	<h1>Server Sent Events (EventSource)</h1>
+
+
+
+        </section>
+        
+        <section >
+        	<h2>Why EventSource?</h2><ul><li class="fragment">Realtime, but readonly.</li></ul>
+
+
+        </section>
+        
+        <section >
+        	<pre><code class="javascript">var url = 'http://localhost:5984/presentations/_changes?feed=eventsource',
+    remoteEvents = new EventSource(url);
+    
+console.log(remoteEvents);</pre></code>
+
+</p>
+
+
+
+        </section>
+        
+        <section >
+        	<h2>NOTE: Cross-Domain</h2>
+
+
+
+        </section>
+        
+        <section >
+        	<p><img src="images/4865872893_56d408f406_o.jpg" alt="">
+
+</p>
+
+
+
+        </section>
+        
+        <section >
+        	
+
+
+        </section>
+        
+	</div>
+
+	<!-- The navigational controls UI -->
+	<aside class="controls">
+		<a class="left" href="#">&#x25C4;</a>
+		<a class="right" href="#">&#x25BA;</a>
+		<a class="up" href="#">&#x25B2;</a>
+		<a class="down" href="#">&#x25BC;</a>
+	</aside>
+
+	<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+	<div class="progress"><span></span></div>
+</div>
+<script src="js/pres.js"></script><script src="js/highlight.js"></script><script>hljs.initHighlightingOnLoad();</script><script src="js/highlight-javascript.js"></script><script src="js/reveal.js"></script><script src="lib/classList.js"></script>
+<script>
+	// Parse the query string into a key/value object
+	var query = {};
+	location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+		query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+	} );
+
+	Reveal.initialize({
+		// Display controls in the bottom right corner
+		controls: true,
+
+		// Display a presentation progress bar
+		progress: true,
+
+		// If true; each slide will be pushed to the browser history
+		history: true,
+
+		// Loops the presentation, defaults to false
+		loop: false,
+
+		// Flags if mouse wheel navigation should be enabled
+		mouseWheel: true,
+
+		// Apply a 3D roll to links on hover
+		rollingLinks: true,
+
+		// UI style
+		theme: query.theme || 'default', // default/neon
+
+		// Transition style
+		transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+	});
+</script>
+</body>
+</html>
