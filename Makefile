@@ -3,7 +3,7 @@ SHELL := /bin/bash
 build:
 	@bake src/pres.js --output resources/js/
 	@cp -r images output/
-	@boxit
+	@/development/projects/DamonOehlman/boxit/bin/boxit
 	@node upload.js
 
 test:

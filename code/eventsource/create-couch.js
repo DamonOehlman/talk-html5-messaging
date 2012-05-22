@@ -1,4 +1,2 @@
-var url = 'http://localhost:5984/presentations/_changes?feed=eventsource',
+var url = 'http://localhost:5984/presentations/_changes?feed=eventsource&include_docs=true',
     remoteEvents = new EventSource(url);
-    
-console.log(remoteEvents);

@@ -10,6 +10,16 @@
           
           el.css('background-image', 'url(' + bgImage + ')');
       });
+  
+      var activeDemo = '';
+      Reveal.addEventListener('slidechanged', function(evt) {
+          // find the active slide
+          var demo = $('section.present').data('demo');
+          
+          if (demo && activeDemo !== demo && window.opener) {
+              window.opener.postMessage('demo.' + demo, '*');
+          }
+      });
   });
   
   /*
@@ -20,10 +30,13 @@
   });
   */
   
-  var url = 'http://localhost:5984/presentations/_changes?feed=eventsource',
+  var url = 'http://localhost:5984/presentations/_changes?feed=eventsource&include_docs=true',
       remoteEvents = new EventSource(url);
-      
-  console.log(remoteEvents);
+  
+  remoteEvents.onmessage = function(evt) {
+      console.log(evt);
+      // window.location.reload();
+  };
   
   
    if (typeof pres != 'undefined') glob.pres = pres;

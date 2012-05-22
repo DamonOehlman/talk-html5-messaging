@@ -9,6 +9,8 @@ $(function() {
         
         el.css('background-image', 'url(' + bgImage + ')');
     });
+
+    //= ../code/xdocmessaging/slidechange.js
 });
 
 /*
@@ -20,3 +22,8 @@ shout('html5-messaging', {
 */
 
 //= ../code/eventsource/create-couch
+
+remoteEvents.onmessage = function(evt) {
+    console.log(evt);
+    // window.location.reload();
+};

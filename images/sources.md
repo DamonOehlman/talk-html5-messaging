@@ -22,3 +22,9 @@
 - Lego Alien Globe <http://www.flickr.com/photos/pasukaru76/5790252062/in/set-72157624732951397/>
 
 - Lego Magic <http://www.flickr.com/photos/pasukaru76/5944308910/in/set-72157624732951397/>
+
+- Clones <http://www.flickr.com/photos/tim_norris/2545465723/>
+
+- Lego Twitter <http://www.flickr.com/photos/photography-andreas/6252678567/>
+
+- Lego Mime <http://www.flickr.com/photos/25171207@N02/5270245821/>

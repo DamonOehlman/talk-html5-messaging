@@ -5,9 +5,11 @@
     
     "sources": [
         "files/intro.md",
+        "files/messaging.md",
         "files/websockets.md",
         "files/eventsource.md",
-        "files/isready.md"
+        "files/webintents.md",
+        "files/summary.md"
     ],
     
     "includes": {
