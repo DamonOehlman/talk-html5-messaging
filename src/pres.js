@@ -23,7 +23,12 @@ shout('html5-messaging', {
 
 //= ../code/eventsource/create-couch
 
+var updateEventId;
 remoteEvents.onmessage = function(evt) {
-    console.log(evt);
-    // window.location.reload();
+    if (updateEventId && evt.lastEventId !== updateEventId) {
+        window.location.reload();
+    }
+    else {
+        updateEventId = evt.lastEventId;
+    }
 };

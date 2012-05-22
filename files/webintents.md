@@ -25,12 +25,14 @@ The __intention__ is to provide:
 
 The proposed markup for registering a Web Intent for use looks something like:
 
-    <intent 
-        action="http://webintents.org/share" 
-        type="text/uri-list" 
-        href="link.html" 
-        disposition="inline"
-        title="Link Share Intent" />
+```html
+<intent 
+    action="http://webintents.org/share" 
+    type="text/uri-list" 
+    href="link.html" 
+    disposition="inline"
+    title="Link Share Intent" />
+```
         
 An intent used in the document is defined in the `head` of the document.
      

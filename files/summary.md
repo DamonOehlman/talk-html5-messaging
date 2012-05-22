@@ -13,6 +13,15 @@
 
 ---
 
+## Code and Talk
+
+If you would like to have a play with the tech, then both the slide deck and websocket demo tool are available on github:
+
+- <https://github.com/DamonOehlman/talk-html5-messaging>
+- <https://github.com/DamonOehlman/messaging-demos>
+
+---
+
 :data-bg:> images/5270245821_3f5b2f2163_b.jpg
 :data-attribution:> http://www.flickr.com/photos/25171207@N02/5270245821/
 
