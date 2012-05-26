@@ -34,9 +34,8 @@
     },
     
     "resources": [
-        "css/pres.style.css <= resources/css/pres.style.css",
+        "css/reveal-tweaks.css <= resources!css/reveal-tweaks.css",
         "js/bgimage-helper.js <= resources!js/bgimage-helper.js",
-        "css/bgimage-helper.css <= resources!css/bgimage-helper.css",
-        "js/pres.js <= resources/js/pres.js"
+        "css/bgimage-helper.css <= resources!css/bgimage-helper.css"
     ]
 }

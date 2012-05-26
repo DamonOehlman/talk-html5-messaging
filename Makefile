@@ -1,10 +1,7 @@
 SHELL := /bin/bash
 
 build:
-	@bake src/pres.js --output resources/js/
-	@cp -r images output/
-	@/development/projects/DamonOehlman/boxit/bin/boxit
-	@node upload.js
+	@DEBUG=boxit* /development/projects/DamonOehlman/boxit/bin/boxit --path src --output .
 
 test:
 	@mocha --reporter spec
