@@ -12,6 +12,10 @@
         "files/summary.md"
     ],
     
+    "aliases": {
+        "resources": "github://DamonOehlman/talk-resources/"
+    },
+    
     "includes": {
         "head": [
             "css/pres.style.css"
@@ -31,6 +35,8 @@
     
     "resources": [
         "css/pres.style.css <= resources/css/pres.style.css",
+        "js/bgimage-helper.js <= resources!js/bgimage-helper.js",
+        "css/bgimage-helper.css <= resources!css/bgimage-helper.css",
         "js/pres.js <= resources/js/pres.js"
     ]
 }
