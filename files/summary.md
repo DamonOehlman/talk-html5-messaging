@@ -1,5 +1,5 @@
 :data-bg:> images/6873936107_c6e959b5d9_b.jpg
-:data-attribution:> 
+:data-attribution:> http://www.flickr.com/photos/kaptainkobold/6873936107/
 
 # Wrapping Up
 
